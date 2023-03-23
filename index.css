@@ -1,0 +1,70 @@
+.carroussel-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.carroussel-container {
+  width: 60%;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.controls-button {
+  width: 40px;
+  height: 40px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  content: icon("img/left.svg");
+  border: 1px solid #757575;
+  color: #757575;
+  background-color: #00000000;
+}
+
+.controls-button:hover {
+  background-color: #75757561;
+  color: #414141;
+  border-color: #414141;
+}
+
+.chevron-left {
+  width: 18px;
+  height: 24px;
+  background-color: #757575;
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 51% 100%, 0% 50%, 50% 0);
+}
+
+.chevron-right {
+  width: 18px;
+  height: 24px;
+  rotate: 180deg;
+  background-color: #757575;
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%, 51% 100%, 0% 50%, 50% 0);
+}
+
+.carroussel-style {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+
+.carroussel-item {
+  width: 300px;
+  height: fit-content;
+  background: #000;
+}
+
+.legend-carroussel {
+  display: none;
+}
+
+.carroussel-item:hover > .legend-carroussel {
+  float: left;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+}
