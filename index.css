@@ -9,6 +9,7 @@
   width: 60%;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .controls-button {
@@ -25,7 +26,7 @@
   background-color: #00000000;
 }
 
-.controls-button:hover {
+.controls-button:is(:hover, :focus) {
   background-color: #75757561;
   color: #414141;
   border-color: #414141;
@@ -61,10 +62,19 @@
 
 .legend-carroussel {
   display: none;
+  opacity: 0;
+  transition: all 0.8s linear;
 }
 
-.carroussel-item:hover > .legend-carroussel {
-  float: left;
+.carroussel-item:is(:hover, :focus) > .legend-carroussel {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  opacity: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.8);
 }
